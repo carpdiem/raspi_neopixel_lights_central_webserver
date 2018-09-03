@@ -28,7 +28,7 @@ document.getElementById("power").addEventListener("click", function() {
 $('.color').noUiSlider({
     start: [3300],
     connect: 'lower',
-    range: {'min': 1300, 'max': 5600}
+    range: {'min': 1300, 'max': 5700}
 });
 
 $('.brightness').noUiSlider({
