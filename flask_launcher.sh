@@ -1,9 +1,8 @@
 #!/bin/bash
 
-if pgrep -x "flask" > /dev/null
+if pgrep -u carpdiem -x "flask" > /dev/null
 then
 	echo "Running"
 else
-	export FLASK_APP=main.py
-	flask run --host=0.0.0.0
+	FLASK_APP=/home/carpdiem/raspi_neopixel_lights_central_webserver/main.py flask run --host=0.0.0.0 &>> /home/carpdiem/raspi_neopixel_lights_central_webserver/flask_log
 fi
