@@ -26,13 +26,13 @@ document.getElementById("power").addEventListener("click", function() {
 }, false);
 
 $('.color').noUiSlider({
-    start: [3300],
+    start: [2900],
     connect: 'lower',
-    range: {'min': 1300, 'max': 5700}
+    range: {'min': 1100, 'max': 4200}
 });
 
 $('.brightness').noUiSlider({
-	start: [0.5],
+	start: [0.7],
 	connect: 'lower',
 	range: {'min': 0.0, 'max': 1.0}
 });
