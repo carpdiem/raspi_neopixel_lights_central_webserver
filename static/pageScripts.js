@@ -24,7 +24,7 @@ function plancksLaw(t) {
 }
 
 function logarithmic_intensity(x) {
-	return 255 * (Math.pow(2, (5. * x)) - 1) / (Math.pow(2, 5.) - 1);
+	return 255 * (Math.pow(2, (x)) - 1) / (Math.pow(2, 1.) - 1);
 }
 
 function set_colors() {
