@@ -24,7 +24,7 @@ function plancksLaw(t) {
 }
 
 function logarithmic_intensity(x) {
-	return 255 * (Math.pow(2, (5. * x)) - 1) / (Math.pow(2, 5.) - 1);
+	return 255 * (Math.pow(2, (x)) - 1) / (Math.pow(2, 1.) - 1);
 }
 
 function set_colors() {
@@ -67,11 +67,11 @@ document.getElementById("power").addEventListener("click", function() {
         xhr2.send();
     }
     var oldOpacity = Math.round($('.variableOpacity').css('opacity') * 10) / 10;
-    if (oldOpacity == 0.3) {
-        $('.variableOpacity').css('opacity', 0.8);
+    if (oldOpacity == 0.7) {
+        $('.variableOpacity').css('opacity', 1.0);
     }
-    else if (oldOpacity == 0.8) {
-        $('.variableOpacity').css('opacity', 0.3);
+    else if (oldOpacity == 1.0) {
+        $('.variableOpacity').css('opacity', 0.7);
     }
 	set_colors();
 }, false);
@@ -110,18 +110,18 @@ $('.slider').change(function() {
     xhr1.send("color_temp="+parseInt($('.color').val())+"&brightness="+parseFloat($('.brightness').val()));
     xhr2.send("color_temp="+parseInt($('.color').val())+"&brightness="+parseFloat($('.brightness').val()));
     var oldOpacity = Math.round($('.variableOpacity').css('opacity') * 10) / 10;
-    if (oldOpacity == 0.3) {
-        $('.variableOpacity').css('opacity', 0.8);
+    if (oldOpacity == 0.7) {
+        $('.variableOpacity').css('opacity', 1.0);
     }
 	set_colors();
 });
 
 /*$.get("status", function( data ) {
     if ( data.result == 0) {
-        $('.variableOpacity').css('opacity', 0.3);
+        $('.variableOpacity').css('opacity', 0.7);
     }
     else {
-        $('.variableOpacity').css('opacity', 0.8);
+        $('.variableOpacity').css('opacity', 1.0);
     }
 });
 
