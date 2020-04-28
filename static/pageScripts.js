@@ -53,16 +53,16 @@ document.getElementById("power").addEventListener("click", function() {
 	var xhr2 = new XMLHttpRequest();
 	var oldOpacity = Math.round($('.variableOpacity').css('opacity') * 10) / 10;
 	if (oldOpacity == 0.3) {
-		xhr1.open("POST", "http://northwall-bedroom/lights_on", true);
-		xhr2.open("POST", "http://southwall-bedroom/lights_on", true);
+		xhr1.open("POST", "http://northwall-bedroom.local/lights_on", true);
+		xhr2.open("POST", "http://southwall-bedroom.local/lights_on", true);
 		xhr1.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr2.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr1.send("color_temp="+parseInt($('.color').val())+"&brightness="+parseFloat($('.brightness').val()));
         xhr2.send("color_temp="+parseInt($('.color').val())+"&brightness="+parseFloat($('.brightness').val()));
     }
     else if (oldOpacity == 0.8) {
-        xhr1.open("POST", "http://northwall-bedroom/lights_off", true);
-        xhr2.open("POST", "http://southwall-bedroom/lights_off", true);
+        xhr1.open("POST", "http://northwall-bedroom.local/lights_off", true);
+        xhr2.open("POST", "http://southwall-bedroom.local/lights_off", true);
         xhr1.send();
         xhr2.send();
     }
@@ -103,8 +103,8 @@ $('.brightness').noUiSlider({
 $('.slider').change(function() {
 	var xhr1 = new XMLHttpRequest();
     var xhr2 = new XMLHttpRequest();
-    xhr1.open("POST", "http://northwall-bedroom/lights_on", true);
-    xhr2.open("POST", "http://southwall-bedroom/lights_on", true);
+    xhr1.open("POST", "http://northwall-bedroom.local/lights_on", true);
+    xhr2.open("POST", "http://southwall-bedroom.local/lights_on", true);
     xhr1.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr2.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr1.send("color_temp="+parseInt($('.color').val())+"&brightness="+parseFloat($('.brightness').val()));
